@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+p{
+    font-family: 'Philosopher', sans-serif; text-align: center;
+}
+
+h1{
+    font-family: 'Philosopher', sans-serif; color: #3f4c6b;
+}
+
+#title-div{
+    border: 2px solid aliceblue;
+    border-radius: 50px 20px;
+    background-color: #FFF;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 10px;
+}
+
+.quiz-area{
+    align-items: center;
+    background-color: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body{
+    background: #606c88;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f4c6b, #606c88); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.row{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    align-items: center;
+    backface-visibility: hidden;
+    background-color: #FFF;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    display: flex;
+    font-size: xx-large;
+    height: 250px;
+    justify-content: center;
+    margin: 25px 25px 25px 25px;
+    width: 250px;
+    transition: transform .5s ease;
+    transform-style:preserve-3d;
+}
+
+.card-back, .card-front{
+    align-items: center;
+    backface-visibility: hidden;
+    background-color: #FFF;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    display: flex;
+    font-size: xx-large;
+    height: 250px;
+    justify-content: center;
+    margin: 25px 25px 25px 25px;
+    position: absolute;
+    width: 250px;
+}
+
+.card-front{
+    color: #3f4c6b;
+    z-index: 1;
+}
+
+.card-back{
+    background-color: darkorange;
+    color: #FFF;
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+.container:hover .card{
+    transform: rotateY(180deg);
+
+}
